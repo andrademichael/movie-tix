@@ -1,0 +1,23 @@
+img {
+  margin-right: 10%;
+}
+.btn {
+  margin: 2%;
+}
+
+#orderPage {
+  display:none;
+}
+
+.floatRight {
+  float: right;
+  text-align: left;
+}
+
+#orderPage .well {
+  min-height: 30vh;
+}
+.border {
+  border: 1px solid black;
+  padding-left: 10px;
+}

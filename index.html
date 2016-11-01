@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/jquery-ui-1.9.2.custom.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Movie Tickets</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="jumbotron">Movie Tix</h1>
+
+      <div class="row" id="movieRow">
+          <div class="col-md-12" id="infernoDiv">
+            <div class="well" id="ticketNumbers">
+              <img src="img/infernoteaserposter.jpg" alt="Inferno, starring Tom Hanks. Rated R.">
+              <button class="btn btn-danger inferno" value="matinee">12:45 pm</button>
+              <button class="btn btn-danger inferno" value="matinee">2:30 pm</button>
+              <button class="btn btn-danger inferno" value="evening">5:20 pm</button>
+              <button class="btn btn-danger inferno" value="evening">9:30 pm</button>
+              <h3>When Robert Langdon wakes up in an Italian hospital with amnesia, he teams up with Dr. Sienna Brooks, and together they must race across Europe against the clock to foil a deadly global plot.</h3>
+              <p>Rated R. Rotten Tomatoes: 20%</p>
+            </div>
+          </div>
+          <div class="col-md-12" id="msPeregrineDiv">
+            <div class="well">
+              <img src="img/missperegrineshomeforpeculiarchildrenposter.jpg" alt="Miss Peregrine's Home for Peculiar Children, starring Eva Green. Rated PG-13.">
+              <button class="btn btn-danger peregrine" value="matinee">2:15 pm</button>
+              <button class="btn btn-danger peregrine" value="evening">5:10 pm</button>
+              <button class="btn btn-danger peregrine" value="evening">8:30 pm</button>
+              <h3>From the director Tim Burton, and based upon the best-selling novel, comes a motion picture experience. Jake discovers clues to a mystery that buttons different worlds and times and finds a place known as Miss Peregrine’s Home for Peculiar Children.</h3>
+              <p>Rated PG-13. Rotten Tomatoes: 64%</p>
+            </div>
+          </div>
+          <div class="col-md-12" id="ouijaDiv">
+            <div class="well">
+              <img src="img/ouija2.jpg" alt="Ouija: Origin of Evil, starring Annalise Basso. Rated PG-13.">
+              <button class="btn btn-danger ouija" value="matinee">10:45 am</button>
+              <button class="btn btn-danger ouija" value="matinee">12:30 pm</button>
+              <button class="btn btn-danger ouija" value="matinee">4:20 pm</button>
+              <button class="btn btn-danger ouija" value="evening">7:40 pm</button>
+              <h3>It was never just a game. Inviting audiences again into the lore of the spirit board, Ouija: Origin of Evil tells a terrifying new tale as the follow-up to 2014’s sleeper hit that opened at number one.</h3>
+              <p>Rated PG-13. Rotten Tomatoes: 82%</p>
+            </div>
+          </div>
+          <div class="col-md-12" id="storksDiv">
+            <div class="well">
+              <img src="img/storks.jpg" alt="Storks, starring Andy Samberg as the voice of Junior. Rated PG.">
+              <button class="btn btn-danger storks" value="matinee">11:45 pm</button>
+              <button class="btn btn-danger storks" value="matinee">3:30 pm</button>
+              <button class="btn btn-danger storks" value="evening">6:30 pm</button>
+              <h3>A stork (Andy Samberg) and his human friend race against time to make their first baby drop.</h3>
+              <p>Rated PG. Rotten Tomatoes: 64%</p>
+            </div>
+          </div>
+      </div><!--end of 1st row-->
+
+
+      <div class="row" id="orderPage">
+        <div class="col-md-9">
+          <div class="well" class="largerWell">
+            <form id="orderForm">
+              <label>Number of Child Tix</label>
+              <select id="childTix" type="option">
+                <option value=0>0</option>
+                <option value=4>1</option>
+                <option value=8>2</option>
+                <option value=12>3</option>
+                <option value=16>4</option>
+              </select>
+              <span> x $4.00</span>
+              <br>
+              <div id="adultTixDiv">
+                <label>Number of Adult Tix</label>
+                <select id="adultTix"type="option">
+                  <option value=0>0</option>
+                  <option value=8>1</option>
+                  <option value=16>2</option>
+                  <option value=24>3</option>
+                  <option value=32>4</option>
+                </select>
+                <span> x $8.00</span>
+                <br>
+              </div>
+              <div id="adultMatineeTixDiv">
+                <label>Number of Adult Matinee Tix</label>
+                <select id="adultMatineeTix" type="option">
+                  <option value=0>0</option>
+                  <option value=6>1</option>
+                  <option value=12>2</option>
+                  <option value=18>3</option>
+                  <option value=24>4</option>
+                </select>
+                <span> x $6.00</span>
+                <br>
+              </div>
+              <label>Number of Senior Tix</label>
+              <select id="seniorTix" type="option">
+                <option value=0>0</option>
+                <option value=5>1</option>
+                <option value=10>2</option>
+                <option value=15>3</option>
+                <option value=20>4</option>
+              </select>
+              <span> x $5.00</span>
+              <br>
+              <button type="submit" class="btn-primary" name="button">Complete Order</button>
+            </form>
+          </div>
+        </div><!--end of col-->
+        <div class="col-md-3">
+          <div class="well">
+            <p>Your Total:</p>
+            <br>
+            <p>Child Tix: $<span id="childResult"></span></p>
+            <p>Adult Tix: $<span id="adultResult"></span></p>
+            <p>Senior Tix: $<span id="seniorResult"></span></p>
+            <div class="border">
+              <h3>Your total: $<span id="total"></span></h3>
+            </div>
+          </div>
+        </div><!--end of col 2-->
+      </div><!--end of row-->
+    </div><!--end of container-->
+  </body>
+</html>
